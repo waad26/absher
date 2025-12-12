@@ -328,6 +328,14 @@
     reader.onload = async function(e) {
       const photoData = e.target.result;
       
+      // Log the photo data length to check if it's empty
+      console.log('Photo Data Length:', photoData ? photoData.length : 0);
+      
+      if (!photoData) {
+          alert('فشل في قراءة ملف الصورة.');
+          return;
+      }
+      
       try {
         // Send data to server
         const response = await fetch('http://localhost:5000/api/submit-report', {
@@ -350,7 +358,12 @@
             window.location.href = "received-report.html";
           }, 2000);
         } else {
-          alert('خطأ: ' + result.error);
+          // Check for 400 error from server
+          if (response.status === 400 && result.error.includes('لم يتم رفع صورة')) {
+              alert('خطأ: لم يتم إرسال بيانات الصورة بشكل صحيح. الرجاء التأكد من اختيار صورة صالحة.');
+          } else {
+              alert('خطأ: ' + result.error);
+          }
         }
       } catch (error) {
         console.error('Error:', error);

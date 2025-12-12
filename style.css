@@ -1,0 +1,255 @@
+/* إعدادات عامة */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Tajawal", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #f5f6f8;
+  direction: rtl;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+/* ===== الهيدر ===== */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 32px;
+  background-color: #ffffff;
+}
+
+/* ===== إضافة شعاري أبشر ورؤية 2030 في أقصى اليسار ===== */
+.top-left {
+  display: flex;
+  align-items: center;
+}
+
+.vision-logos {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.vision-logo-img {
+  width: 40px;
+  height: 40px;
+}
+
+/* ===== شعار وزارة الداخلية في أقصى اليمين ===== */
+.top-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  width: 50px;
+  height: 50px;
+}
+
+/* ===== شريط البحث ===== */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 32px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2e5ec;
+}
+
+.search-bar input {
+  width: 100%;
+  max-width: 420px;
+  padding: 8px 12px;
+  border-radius: 4px 0 0 4px;
+  border: 1px solid #d0d5e3;
+  border-left: none;
+  font-size: 13px;
+}
+
+.search-bar .search-btn {
+  padding: 8px 16px;
+  border-radius: 0 4px 4px 0;
+  border: 1px solid #009a3d;
+  background-color: #009a3d;
+  color: #ffffff;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* ===== تخطيط المحتوى ===== */
+.layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 24px;
+  padding: 24px 32px;
+}
+
+/* الشريط الجانبي */
+.sidebar {
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #e2e5ec;
+  padding: 12px 0;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.15s, border-right 0.15s;
+}
+
+.sidebar-item .sidebar-icon img {
+  width: 22px;
+  height: 22px;
+}
+
+.sidebar-item:hover {
+  background-color: #f6fbf8;
+}
+
+.sidebar-item.active {
+  border-right: 4px solid #009a3d;
+  background-color: #f0faf4;
+}
+
+/* منطقة المحتوى */
+.content-area {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.breadcrumb {
+  font-size: 13px;
+  color: #555;
+}
+
+.breadcrumb span:first-child {
+  font-weight: 500;
+}
+
+.breadcrumb-separator {
+  margin: 0 4px;
+  color: #999;
+}
+
+/* التبويبات */
+.tabs {
+  display: inline-flex;
+  background-color: #f5f7fb;
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+}
+
+.tab-btn {
+  padding: 8px 18px;
+  border: none;
+  background: transparent;
+  font-size: 13px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: background-color 0.15s, border-bottom 0.15s;
+}
+
+.tab-btn.active {
+  background-color: #ffffff;
+  border-bottom-color: #009a3d;
+  color: #009a3d;
+}
+
+/* الكرت الأبيض */
+.card {
+  background-color: #ffffff;
+  border-radius: 0 8px 8px 8px;
+  border: 1px solid #e2e5ec;
+  padding: 24px;
+  min-height: 180px;
+}
+
+.list {
+  list-style: none;
+  font-size: 14px;
+}
+
+.list li {
+  position: relative;
+  padding-right: 16px;
+}
+
+.list li::before {
+  content: "•";
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #000;
+}
+
+/* محتوى التبويبات */
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.placeholder-text {
+  font-size: 13px;
+  color: #777;
+}
+
+/* ===== استجابة الشاشات الصغيرة ===== */
+@media (max-width: 992px) {
+  .top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    order: 2;
+  }
+
+  .content-area {
+    order: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .top-menu {
+    flex-wrap: wrap;
+  }
+
+  .search-bar {
+    padding: 10px 16px;
+  }
+
+  .layout {
+    padding: 16px;
+  }
+}
+
+
+
+
+

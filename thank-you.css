@@ -1,0 +1,121 @@
+/* إعدادات عامة */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Tajawal', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+/* تنسيق الحاوية الرئيسية */
+.app {
+  width: 100%; /* تعديل العرض ليغطي كامل الصفحة */
+  margin: 0 auto;
+  background-color: white;
+  padding: 10px; /* تقليل المسافة بين الجدار والمحتوى */
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* تنسيق الهيدر */
+header {
+  background-color: white;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.vision-logos {
+  display: flex;
+  gap: 10px;
+}
+
+.vision-logo-img {
+  height: 40px;
+}
+
+.logo img {
+  height: 40px;
+}
+
+/* تنسيق محتوى الصفحة */
+.content-area {
+  margin-top: 10px; /* تقليل المسافة بين الهيدر والمحتوى */
+  text-align: left;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 15px; /* تقليل المسافة بين العنوان والمحتوى */
+  color: #333;
+  text-align: left;
+}
+
+p {
+  font-size: 16px;
+  color: #555;
+  text-align: left;
+}
+
+.form-section {
+  margin-top: 20px;
+  text-align: left;
+}
+
+label {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: inline-block;
+  text-align: left;
+}
+
+input, select {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  font-size: 14px;
+  background-color: #f9f9f9;
+  text-align: left;
+}
+
+select {
+  background-color: #fff;
+}
+
+/* تنسيق الزر */
+.button-container {
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+/* تنسيق للنماذج والخطوط */
+input[type="text"], input[type="number"], select {
+  font-size: 14px;
+}
+
+button {
+  font-size: 14px;
+}

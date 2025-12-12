@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>بلاغ عن شخص مفقود / متغيب</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Tajawal', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    .app {
+      width: 80%;
+      margin: 0 auto;
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header {
+      background-color: white;
+      padding: 10px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ccc;
+    }
+    .vision-logos {
+      display: flex;
+      gap: 10px;
+    }
+
+    .vision-logo-img {
+      height: 40px;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    .content-area {
+      margin-top: 20px;
+    }
+
+    h1 {
+      font-size: 23px;
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    form {
+      display: grid;
+      gap: 15px;
+      grid-template-columns: 1fr;
+    }
+
+    label {
+      font-weight: bold;
+      color: #555;
+    }
+
+    input, select, button, textarea {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+      width: 100%;
+    }
+
+    input, select {
+      background-color: #f9f9f9;
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+      border: none;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    h2 {
+      font-size: 18px;
+      margin-top: 30px;
+      color: #333;
+    }
+
+    select {
+      background-color: #fff;
+    }
+
+    .checkbox-group {
+      display: grid;
+      gap: 10px;
+    }
+
+    .checkbox-group label {
+      display: inline-block;
+      margin-bottom: 5px;
+    }
+
+    .checkbox-group input[type="checkbox"] {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      border: 2px solid #007bff;
+      border-radius: 50%;
+      background-color: #fff;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .checkbox-group input[type="checkbox"]:checked {
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+
+    .checkbox-group input[type="checkbox"]:checked::after {
+      content: "";
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      width: 8px;
+      height: 8px;
+      background-color: white;
+      border-radius: 50%;
+    }
+
+    .checkbox-group-container {
+      margin-top: 20px;
+    }
+
+    .checkbox-group-container label {
+      margin-bottom: 10px;
+    }
+
+    .checkbox-group-container input[type="checkbox"] {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div class="top-left">
+        <div class="vision-logos">
+          <img src="images/logo-absher.png" alt="شعار أبشر" class="vision-logo-img" />
+          <img src="images/logo-vision2030.png" alt="شعار رؤية 2030" class="vision-logo-img" />
+        </div>
+      </div>
+
+      <div class="top-right">
+        <div class="logo">
+          <img src="images/logo-moi.png" alt="شعار وزارة الداخلية" class="logo-img" />
+        </div>
+      </div>
+    </header>
+
+    <section class="content-area">
+      <h1>بلاغ عن شخص مفقود / متغيب</h1>
+      <form id="missing-form">
+        <h2>بيانات الشخص المفقود</h2>
+        
+        <label for="missing-name">الاسم الكامل للمفقود:</label>
+        <input type="text" id="missing-name" name="missing-name" placeholder="أدخل الاسم الكامل للمفقود" required />
+
+        <label for="missing-id">رقم هوية المفقود (إذا وجد):</label>
+        <input type="text" id="missing-id" name="missing-id" placeholder="أدخل رقم هوية المفقود" />
+
+        <label for="gender">الجنس:</label>
+        <select id="gender" name="gender" required>
+          <option value="">اختر الجنس</option>
+          <option value="ذكر">ذكر</option>
+          <option value="أنثى">أنثى</option>
+        </select>
+
+        <label for="age-category">فئة العمر:</label>
+        <select id="age-category" name="age-category" required>
+          <option value="">اختر فئة العمر</option>
+          <option value="طفل 0-12">طفل 0-12</option>
+          <option value="مراهق 13-17">مراهق 13-17</option>
+          <option value="بالغ 18-59">بالغ 18-59</option>
+          <option value="كبير سن 60+">كبير سن 60+</option>
+        </select>
+
+        <label for="approx-age">العمر التقريبي:</label>
+        <input type="number" id="approx-age" name="approx-age" placeholder="أدخل العمر التقريبي" required />
+
+        <h2>تفاصيل آخر مكان وزمان تم فيه مشاهدة الشخص</h2>
+
+        <label for="last-location">آخر مكان شوهد فيه:</label>
+        <input type="text" id="last-location" name="last-location" placeholder="أدخل آخر مكان تم فيه مشاهدة الشخص" required />
+
+        <label for="location-type">نوع المكان:</label>
+        <select id="location-type" name="location-type" required>
+          <option value="">اختر نوع المكان</option>
+          <option value="منزل">منزل</option>
+          <option value="شارع/حي سكني">شارع/حي سكني</option>
+          <option value="مركز تجاري/مول">مركز تجاري/مول</option>
+          <option value="مدرسة/جامعة">مدرسة/جامعة</option>
+          <option value="حديقة/ممشى">حديقة/ممشى</option>
+          <option value="مستشفى/مركز صحي">مستشفى/مركز صحي</option>
+          <option value="محطة نقل">محطة نقل (مترو/حافلات/قطار)</option>
+          <option value="منطقة مفتوحة">منطقة مفتوحة (بر/استراحة)</option>
+          <option value="أخرى">أخرى</option>
+        </select>
+<h2>كم مضى على فقدانه تقريبًا؟</h2>
+
+<label for="time-since-missing">الوقت الذي مضى منذ فقدانه:</label>
+<select id="time-since-missing" name="time-since-missing" required>
+  <option value="">اختر الوقت</option>
+  <option value="1-3 ساعات">1-3 ساعات</option>
+  <option value="3-6 ساعات">3-6 ساعات</option>
+  <option value="6-12 ساعات">6-12 ساعات</option>
+  <option value="أكثر من 24 ساعة">أكثر من 24 ساعة</option>
+</select>
+<h2>تاريخ ووقت آخر مشاهدة</h2>
+<label for="last-seen-date-time">تاريخ ووقت آخر مشاهدة:</label>
+<input type="datetime-local" id="last-seen-date-time" name="last-seen-date-time" required />
+        <h2>هل يعاني الشخص من أي حالات صحية أو ظرف يزيد من خطورة غيابه؟</h2>
+
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="chronic-disease" value="مرض مزمن خطير"> يعاني من مرض مزمن خطير (مثل القلب، الرئة، فشل الكلى، السكري، ضغط الدم...)</label>
+          <label><input type="checkbox" name="mental-disorder" value="مرض نفسي/ذهني"> يعاني من مرض نفسي أو ذهني (مثل الزهايمر، التوحد، الاضطراب الذهني...)</label>
+          <label><input type="checkbox" name="medication" value="تتبع أدوية منتظمة"> يتناول أدوية منتظمة قد يضر تركها</label>
+          <label><input type="checkbox" name="mental-disability" value="إعاقة ذهنية"> يعاني من إعاقة ذهنية أو صعوبة في التمييز</label>
+          <label><input type="checkbox" name="unable-to-speak" value="لا يتحدث"> لا يتحدث أو لا يستطيع التعبير عن نفسه</label>
+          <label><input type="checkbox" name="no-condition" value="لا توجد حالة صحية معروفة"> لا توجد أي حالة صحية معروفة</label>
+        </div>
+
+        <label for="health-details">إذا كانت هناك أي تفاصيل إضافية عن الحالة الصحية، يمكنك توضيحها هنا (اختياري):</label>
+        <textarea id="health-details" name="health-details" rows="4" placeholder="أدخل تفاصيل إضافية عن الحالة الصحية (اختياري)"></textarea>
+
+    <h2>وصف الشخص</h2>
+<label for="physical-description">وصف الشخص:</label>
+<textarea id="physical-description" name="physical-description" rows="4" placeholder="أدخل وصف الشخص (الطول، لون الشعر، علامات فارقة مثل نظارة، عكاز، شامة...)"></textarea>
+
+<div class="checkbox-group-container">
+  <label><input type="checkbox" name="has-phone" value="يحمل جوال خاص به" class="round-checkbox"> يحمل جوال خاص به</label>
+  <label><input type="checkbox" name="no-contact" value="لايحمل اي وسيلة تواصل" class="round-checkbox"> لا يحمل أي وسيلة تواصل</label>
+  <label><input type="checkbox" name="attempts-travel" value="يحاول السفر أو ركوب وسيلة نقل" class="round-checkbox"> يحاول السفر أو ركوب وسيلة نقل</label>
+  <label><input type="checkbox" name="no-address" value="لا يعرف عنوان منزل" class="round-checkbox"> لا يعرف وصف أو عنوان منزل</label>
+</div>
+
+<style>
+  /* تعديل شكل مربعات الاختيار لتصبح دوائر */
+  .round-checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #007bff;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .round-checkbox:checked {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+
+  .round-checkbox:checked::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    border-radius: 50%;
+  }
+
+  .checkbox-group-container {
+    margin-top: 20px;
+  }
+
+  .checkbox-group-container label {
+    margin-bottom: 10px;
+  }
+
+  .checkbox-group-container input[type="checkbox"] {
+    margin-right: 10px;
+  }
+</style>
+
+
+        <label for="attachments">مرفقات:</label>
+        <input type="file" id="attachments" name="attachments" accept="image/*" />
+<button type="submit">إرسال البلاغ</button>
+
+        <p style="text-align: center; font-size: 14px; color: #555; margin-top: 20px;">جميع المعلومات التي تقدمها تتم التعامل معها بسرية تامة ووفقاً للسياسات المعتمدة لحماية البيانات.</p>
+      </form>
+    </section>
+  </div>
+ <script>
+  document.getElementById('missing-form').addEventListener('submit', async function(event) {
+    event.preventDefault(); // منع إرسال النموذج التلقائي
+    
+    // Get form data
+    const name = document.getElementById('missing-name').value;
+    const fileInput = document.getElementById('attachments');
+    
+    if (!fileInput.files || fileInput.files.length === 0) {
+      alert('الرجاء رفع صورة للشخص المفقود');
+      return;
+    }
+    
+    // Convert image to base64
+    const file = fileInput.files[0];
+    const reader = new FileReader();
+    
+    reader.onload = async function(e) {
+      const photoData = e.target.result;
+      
+      try {
+        // Send data to server
+        const response = await fetch('http://localhost:5000/api/submit-report', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            name: name,
+            photo: photoData
+          })
+        });
+        
+        const result = await response.json();
+        
+        if (result.success) {
+          alert('تم إرسال البلاغ بنجاح! سيتم فتح نظام التعرف على الوجوه...');
+          // Wait a bit for camera to start
+          setTimeout(() => {
+            window.location.href = "received-report.html";
+          }, 2000);
+        } else {
+          alert('خطأ: ' + result.error);
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        alert('خطأ في الاتصال بالخادم. تأكد من تشغيل bridge.py');
+      }
+    };
+    
+    reader.readAsDataURL(file);
+  });
+</script>

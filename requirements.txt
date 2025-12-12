@@ -1,0 +1,7 @@
+opencv-contrib-python
+numpy
+Pillow
+arabic-reshaper
+python-bidi
+flask
+flask-cors

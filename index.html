@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>بوابة الخدمات الإلكترونية</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <!-- ===== الهيدر ===== -->
+    <header class="top-bar">
+      <div class="top-left">
+        <!-- إضافة شعاري أبشر ورؤية 2030 في أقصى اليسار -->
+        <div class="vision-logos">
+          <img src="images/logo-absher.png" alt="شعار أبشر" class="vision-logo-img" />
+          <img src="images/logo-vision2030.png" alt="شعار رؤية 2030" class="vision-logo-img" />
+        </div>
+      </div>
+      <div class="top-right">
+        <!-- إضافة شعار وزارة الداخلية في أقصى اليمين -->
+        <div class="logo">
+          <img src="images/logo-moi.png" alt="شعار وزارة الداخلية" class="logo-img" />
+        </div>
+      </div>
+    </header>
+    <!-- ===== شريط البحث ===== -->
+    <section class="search-bar">
+      <input type="text" placeholder="اكتب هنا للبحث" />
+      <button class="search-btn">بحث</button>
+    </section>
+    <main class="layout">
+      <!-- الشريط الجانبي -->
+      <aside class="sidebar">
+        <div class="sidebar-item active">
+          <div class="sidebar-icon">
+            <img src="images/icon-page.png" alt="الخدمات الإلكترونية" />
+          </div>
+          <span>الخدمات الإلكترونية</span>
+        </div>
+        <div class="sidebar-item">
+          <div class="sidebar-icon">
+            <img src="images/icon-camera.png" alt="استبيانات أبشر" />
+          </div>
+          <span>استبيانات أبشر</span>
+        </div>
+        <div class="sidebar-item">
+          <div class="sidebar-icon">
+            <img src="images/icon-payments.png" alt="المدفوعات الحكومية" />
+          </div>
+          <span>المدفوعات الحكومية</span>
+        </div>
+        <div class="sidebar-item">
+          <div class="sidebar-icon">
+            <img src="images/icon-user-info.png" alt="التفويضات" />
+          </div>
+          <span>التفويضات</span>
+        </div>
+      </aside>
+
+      <!-- محتوى الصفحة الرئيسي -->
+      <section class="content-area">
+        <div class="breadcrumb">
+          <span>الخدمات</span>
+          <span class="breadcrumb-separator">›</span>
+          <span>خدمات أفراد الأسرة</span>
+        </div>
+
+        <div class="tabs">
+          <button class="tab-btn active" data-target="services">خدمات</button>
+          <button class="tab-btn" data-target="inquiries">استعلامات</button>
+        </div>
+
+        <div class="card">
+          <div class="tab-content active" id="services">
+            <ul class="list">
+              <!-- الرابط الخاص بـ "بلاغ عن شخص مفقود / متغيب" -->
+              <li><a href="missing-person.html">بلاغ عن شخص مفقود / متغيب</a></li>
+            </ul>
+          </div>
+          <div class="tab-content" id="inquiries">
+            <ul class="list">
+              <!-- رابط استعلام حالة بلاغ -->
+              <li><a href="inquiry.html">استعلام حالة بلاغ</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

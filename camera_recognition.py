@@ -260,9 +260,9 @@ class CameraRecognitionApp:
         
         # Camera opened successfully, configure it
         try:
-            # Set camera properties
-            self.camera.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
-            self.camera.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)
+            # Set camera properties to a more stable resolution (640x480)
+            self.camera.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
+            self.camera.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
             self.camera.set(cv2.CAP_PROP_FPS, 30)
             
             self.camera_running = True
@@ -334,8 +334,8 @@ class CameraRecognitionApp:
                 img = Image.fromarray(frame_resized)
                 imgtk = ImageTk.PhotoImage(image=img)
                 
-                # Update label
-                self.camera_label.imgtk = imgtk
+                # Update label and explicitly retain reference to prevent garbage collection
+                self.camera_label.imgtk = imgtk # Retain reference
                 self.camera_label.configure(image=imgtk, text="")
                 
                 # Small delay
